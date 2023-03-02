@@ -5,8 +5,8 @@ function testsnapshot() {
 
       navigator.mediaDevices.getUserMedia(constraints)
         .then(function(stream) {
-            let streaming = false;
-            let snapshotvideo = document.createElement('video');
+            var streaming = false;
+            var snapshotvideo = document.createElement('video');
 
             snapshotvideo.setAttribute('autoplay', '');
             snapshotvideo.setAttribute('playsinline', '');
@@ -21,7 +21,7 @@ function testsnapshot() {
             snapshotvideo.addEventListener("canplay", function(ev) {
               if (!streaming) {
                 setTimeout(function() {
-                    let canvas = document.createElement("canvas");
+                    var canvas = document.createElement("canvas");
                     canvas.width = snapshotvideo.videoWidth;
                     canvas.height = snapshotvideo.videoHeight;
 
