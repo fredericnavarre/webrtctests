@@ -1,6 +1,6 @@
 function testsnapshot() {
 
-  var constraints = { video: { width : {exact: 1920}, height : {exact: 1080} } };
+  var constraints = { video: { width : {exact: 1920}, height : {exact: 1080}, facingMode:"environment" } };
  console.log('initial constraints: ' + JSON.stringify(constraints));
 
       navigator.mediaDevices.getUserMedia(constraints)
